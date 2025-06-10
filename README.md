@@ -16,6 +16,19 @@ Un servidor del Protocolo de Contexto de Modelo (MCP) implementado en Python.
 
 Este proyecto implementa un servidor MCP que permite la integración con clientes compatibles como Claude Desktop, VS Code Extensions, y otras aplicaciones que soportan el protocolo MCP.
 
+## 🌿 Ramas de Desarrollo
+
+- **`main`**: Código estable y listo para producción ✅
+- **`development`**: Rama de desarrollo activo con nuevas funcionalidades 🚧
+- **`feature/*`**: Ramas para desarrollo de funcionalidades específicas
+
+Para desarrollo, usar la rama `development`:
+```bash
+git clone https://github.com/diegosvart/MCP-Server.git
+cd MCP-Server
+git checkout development
+```
+
 ## Características
 
 - ✅ Soporte para Herramientas (Tools)
