@@ -1,0 +1,25 @@
+{
+    "server": {
+        "name": "mcp-server",
+        "version": "0.1.0",
+        "host": "localhost",
+        "port": 8000,
+        "debug": false
+    },
+    "capabilities": {
+        "tools": true,
+        "resources": true,
+        "prompts": true,
+        "discovery": false,
+        "sampling": false,
+        "roots": false
+    },
+    "logging": {
+        "level": "INFO",
+        "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+    },
+    "security": {
+        "allowed_hosts": ["localhost", "127.0.0.1"],
+        "cors_enabled": true
+    }
+}
