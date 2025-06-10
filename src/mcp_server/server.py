@@ -58,11 +58,41 @@ class MCPServer:
         async def list_resources():
             """Listar recursos disponibles"""
             return {"resources": list(self.resources.keys())}
-        
         @self.app.get("/prompts")
         async def list_prompts():
             """Listar prompts disponibles"""
             return {"prompts": list(self.prompts.keys())}
+        
+        @self.app.post("/tools/call")
+        async def call_tool(request: dict):
+            """Ejecutar una herramienta específica"""
+            try:
+                method = request.get("method")
+                params = request.get("params", {})
+                tool_name = params.get("name")
+                arguments = params.get("arguments", {})
+                
+                if tool_name not in self.tools:
+                    return {"error": f"Herramienta '{tool_name}' no encontrada"}
+                
+                # Ejecutar la herramienta
+                tool_function = self.tools[tool_name]["function"]
+                
+                # Manejar argumentos como lista o diccionario
+                if isinstance(arguments, list):
+                    result = tool_function(*arguments)
+                elif isinstance(arguments, dict):
+                    result = tool_function(**arguments)
+                else:
+                    result = tool_function(arguments)
+                
+                return {
+                    "content": [{"type": "text", "text": str(result)}]
+                }
+                
+            except Exception as e:
+                return {"error": f"Error ejecutando herramienta: {str(e)}"}
+    
     
     def register_tool(self, name: str, function: callable, description: str = ""):
         """Registrar una herramienta"""

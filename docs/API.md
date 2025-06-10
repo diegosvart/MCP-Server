@@ -200,3 +200,144 @@ pytest tests/test_prompts.py
 ## Ejemplos
 
 Ver el directorio `examples/` para ejemplos completos de uso.
+
+## Herramientas de Archivos
+
+El servidor incluye herramientas avanzadas para el manejo de archivos y directorios:
+
+### list_directory
+Lista el contenido de un directorio.
+
+**Parámetros:**
+- `path` (string): Ruta del directorio a listar
+
+**Ejemplo de uso:**
+```python
+# Listar directorio actual
+result = call_tool("list_directory", ".")
+```
+
+### read_file
+Lee el contenido de un archivo.
+
+**Parámetros:**
+- `file_path` (string): Ruta del archivo a leer
+
+**Ejemplo de uso:**
+```python
+content = call_tool("read_file", "documento.txt")
+```
+
+### write_file
+Escribe contenido a un archivo.
+
+**Parámetros:**
+- `file_path` (string): Ruta del archivo a escribir
+- `content` (string): Contenido a escribir
+
+**Ejemplo de uso:**
+```python
+result = call_tool("write_file", "nuevo.txt", "Contenido del archivo")
+```
+
+### create_directory
+Crea un nuevo directorio.
+
+**Parámetros:**
+- `dir_path` (string): Ruta del directorio a crear
+
+**Ejemplo de uso:**
+```python
+result = call_tool("create_directory", "mi_directorio")
+```
+
+### delete_file
+Elimina un archivo o directorio.
+
+**Parámetros:**
+- `file_path` (string): Ruta del archivo o directorio a eliminar
+
+**Ejemplo de uso:**
+```python
+result = call_tool("delete_file", "archivo_temporal.txt")
+```
+
+### copy_file
+Copia un archivo de una ubicación a otra.
+
+**Parámetros:**
+- `source_path` (string): Ruta del archivo origen
+- `dest_path` (string): Ruta del archivo destino
+
+**Ejemplo de uso:**
+```python
+result = call_tool("copy_file", "original.txt", "copia.txt")
+```
+
+### find_files
+Busca archivos usando patrones glob.
+
+**Parámetros:**
+- `pattern` (string): Patrón de búsqueda (ej: "*.py", "docs/*.md")
+- `base_path` (string, opcional): Directorio base para la búsqueda (default: ".")
+
+**Ejemplo de uso:**
+```python
+# Buscar todos los archivos Python
+result = call_tool("find_files", "*.py")
+
+# Buscar archivos Markdown en docs/
+result = call_tool("find_files", "*.md", "docs")
+```
+
+### get_file_info
+Obtiene información detallada de un archivo.
+
+**Parámetros:**
+- `file_path` (string): Ruta del archivo
+
+**Ejemplo de uso:**
+```python
+info = call_tool("get_file_info", "documento.pdf")
+```
+
+## Endpoint para Ejecutar Herramientas
+
+### POST /tools/call
+Ejecuta una herramienta específica del servidor.
+
+**Formato de solicitud:**
+```json
+{
+  "method": "tools/call",
+  "params": {
+    "name": "nombre_herramienta",
+    "arguments": ["arg1", "arg2"] // o {"param": "value"}
+  }
+}
+```
+
+**Formato de respuesta:**
+```json
+{
+  "content": [
+    {
+      "type": "text",
+      "text": "Resultado de la herramienta"
+    }
+  ]
+}
+```
+
+**Ejemplo con curl:**
+```bash
+curl -X POST http://localhost:8001/tools/call \
+  -H "Content-Type: application/json" \
+  -d '{
+    "method": "tools/call",
+    "params": {
+      "name": "list_directory",
+      "arguments": ["."]
+    }
+  }'
+```
