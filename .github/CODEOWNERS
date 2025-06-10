@@ -1,0 +1,33 @@
+# CODEOWNERS file for MCP Server
+# This file defines who owns what parts of the codebase
+# See: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Global owner - Diego Morales
+* @diegosvart
+
+# Source code
+/src/ @diegosvart
+/src/mcp_server/ @diegosvart
+
+# Tests
+/tests/ @diegosvart
+
+# CI/CD and GitHub configuration
+/.github/ @diegosvart
+
+# Documentation
+/docs/ @diegosvart
+*.md @diegosvart
+
+# Configuration files
+/config/ @diegosvart
+requirements.txt @diegosvart
+setup.py @diegosvart
+pytest.ini @diegosvart
+
+# Scripts
+*.ps1 @diegosvart
+*.py @diegosvart
+
+# Examples
+/examples/ @diegosvart
