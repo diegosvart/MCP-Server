@@ -5,10 +5,10 @@
 ## Sobre el Autor
 
 **Diego Morales** ([@diegosvart](https://github.com/diegosvart))  
-- Ingeniero Informático  
-- Diplomado en Machine Learning y Big Data  
-- Pontificia Universidad Católica de Chile  
-- Email: moralesc.diego@gmail.com  
+- Ingeniero Informático AIEP  
+- Diplomado en Machine Learning y Big Data PUC  
+- AIEP (Título) | Pontificia Universidad Católica de Chile (Diplomado)  
+- Email: moralesc.diego@gmail.com
 
 ## Cómo Contribuir
 

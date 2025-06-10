@@ -4,8 +4,8 @@ MCP Server - Python Implementation
 Este módulo implementa un servidor del Protocolo de Contexto de Modelo (MCP)
 que permite la integración con clientes compatibles.
 
-Autor: Diego Morales - Ingeniero Informático (PUC Chile)
-Diplomado en Machine Learning y Big Data
+Autor: Diego Morales - Ingeniero Informático AIEP
+Diplomado en Machine Learning y Big Data PUC
 Email: moralesc.diego@gmail.com
 GitHub: @diegosvart
 """

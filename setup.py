@@ -4,7 +4,7 @@ setup(
     name="mcp-server",
     version="0.1.0",
     description="Servidor del Protocolo de Contexto de Modelo implementado en Python",
-    author="Diego Morales - Ingeniero Informático (PUC Chile)",
+    author="Diego Morales - Ingeniero Informático AIEP, Diplomado en Machine Learning y Big Data PUC",
     author_email="moralesc.diego@gmail.com",
     packages=find_packages(where="src"),
     package_dir={"": "src"},

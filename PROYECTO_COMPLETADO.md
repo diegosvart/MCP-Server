@@ -154,6 +154,6 @@ pytest tests/ -v
 **Proyecto completado exitosamente** ✅  
 **Fecha**: 10 de junio de 2025  
 **Desarrollador**: Diego Morales ([@diegosvart](https://github.com/diegosvart))  
-**Perfil**: Ingeniero Informático, Diplomado en Machine Learning y Big Data  
-**Institución**: Pontificia Universidad Católica de Chile  
+**Perfil**: Ingeniero Informático AIEP, Diplomado en Machine Learning y Big Data PUC  
+**Instituciones**: AIEP (Título) | Pontificia Universidad Católica de Chile (Diplomado)  
 **Contact**: moralesc.diego@gmail.com

@@ -1,11 +1,16 @@
 # MCP Server - Python Implementation
 
+[![GitHub](https://img.shields.io/github/license/diegosvart/MCP-Server)](https://github.com/diegosvart/MCP-Server/blob/main/LICENSE)
+[![Python](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.104%2B-green)](https://fastapi.tiangolo.com/)
+[![Tests](https://img.shields.io/badge/tests-17%20passed-brightgreen)](https://github.com/diegosvart/MCP-Server)
+
 Un servidor del Protocolo de Contexto de Modelo (MCP) implementado en Python.
 
 **Autor**: Diego Morales ([@diegosvart](https://github.com/diegosvart))  
-**Título**: Ingeniero Informático, Diplomado en Machine Learning y Big Data  
-**Institución**: Pontificia Universidad Católica de Chile  
-**Email**: moralesc.diego@gmail.com  
+**Título**: Ingeniero Informático AIEP, Diplomado en Machine Learning y Big Data PUC  
+**Instituciones**: AIEP (Título) | Pontificia Universidad Católica de Chile (Diplomado)  
+**Email**: moralesc.diego@gmail.com
 
 ## Descripción
 
